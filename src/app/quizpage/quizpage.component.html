@@ -1,0 +1,108 @@
+<html>
+<head>
+<script src="./quizpage.component.ts"></script>
+<title>quiz</title>
+</head>
+
+<body>
+        
+        
+
+        <div class="nav" style="background-image: url(./assets/images/haha.jpg);background-size: cover;" >
+                
+                  <p style="color: white;  font-size: 30px; color: white; display: inline-block;position:absolute; left:10px; font-family:Great vibes cursive;"> Welcome {{username}}
+                           <p style="color: white;  font-size: 30px; color: white; display: inline-block;position:absolute; left:650px; font-family:Great vibes cursive;"> Quiz Generator
+                  </p>
+
+                  <div style="font-size: 30px; color: white; display: inline-block;position:absolute; right:150px;">
+                        <b> Time Remaining: {{time}}s </b>
+                        
+                        </div>
+               
+                  <div style="font-size: 30px; color: white; display: inline-block;position:absolute; right:10px;">
+                        <button id="btn" (click)= "logout()" style="border-radius:25px; background-color: rgb(252, 253, 252);
+                        color: #161515;;  font-family: Lucida Grande, Geneva, Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 16px; border: 1px solid transparent;
+                        font-weight: bold; padding: 5px 25px; "> <b> LOGOUT </b> </button>
+                      </div> 
+              </div>
+
+<!--
+        <div class="nav" >
+    
+                <div class="nav-header"  >            
+                  
+                <div class="nav-title"  >
+                <p style="color: white;  "> Welcome {{username}}</p> 
+                </div> 
+                <div style="font-size: 30px;  color: white; display: inline-block; position:fixed; left:50%;">
+                     Quiz Generator
+                </div> 
+                <div style="font-size: 30px; color: white; display: inline-block;position:absolute; right:10px;">
+                       <button id="btn" (click)= "logout()"> <b> Logout </b> </button>
+                   </div> 
+                </div>
+            </div>-->
+<br /><br /><br /><br><br><br><br><br>
+<div class="col-sm-12 text-center">
+<button class ="start"  id ="start" (click)="start()" ><b>Click here to Start Quiz</b></button>
+</div>
+<br /><br /><br />
+<div  id="qp" >
+<!--<div id= "q1">Quiz</div> -->
+
+<table align="center" width="1000px" style=" text-align:center; background-repeat:no-repeat; background-size:cover; background-image: url(../../assets/images/haha.jpg); border-radius:5px;  border: 1px solid black;">
+    <tr>
+    <td><div id="qnum"></div></td>
+    <td align="left">
+    <div class="ques" id="q">
+    </div>
+</td>
+    </tr>
+    <tr>
+    <td><input type="radio" id="opt1" name="options"></td>
+    <td align="left"> <span id="optt1"></span> </td>
+    
+   </tr>
+   <tr>
+    <td><input type="radio" id="opt2" name="options"></td>
+    <td align="left"><span id="optt2"></span></td>
+    </tr>
+    <tr>
+            <td><input type="radio" id="opt3" name="options"> </td>
+            <td align="left"><span id="optt3" ></span> </td>
+    </tr>
+    <tr>
+       <td></td>
+    <td>
+    <button id="btn-next" (click)="checkAnswer()" style="background-color:white; color:black;"> Next </button>
+    <button id="btn-submit" (click)="checkAnswer()" style="background-color:white; color:black;">Submit </button>
+</td>
+
+    </tr>
+        
+</table>
+
+
+
+<!--
+<div class="ques" id="q">
+    </div>
+    <div ><input type="radio" id="opt1" name="options">
+    <span id="optt1"></span>
+    </div>
+    <div><input type="radio" id="opt2" name="options">
+    <span id="optt2"></span>
+    </div>
+    <div><input type="radio" id="opt3" name="options">
+    <span id="optt3"></span>
+    
+    </div>-->
+
+
+</div>
+
+
+</body>
+
+</html>
